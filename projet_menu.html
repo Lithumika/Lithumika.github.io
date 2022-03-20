@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu déroulant</title>
+    <style type="text/css">
+        body{
+    font-family:Arial, Helvetica, sans-serif
+    }
+
+nav{
+    width: 80%;
+    margin: 0 auto;
+    background-color:white;
+    border-top: #34495E;
+    position:relative;
+    top:0px;
+    left: auto;
+}
+nav > ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul::after{
+    content: "";
+    display: none;
+    clear: both;
+}
+
+nav a{
+    display:block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+nav > ul > li{
+    padding: 15px;
+    background-color: #34495E;
+    border-top: 1px solid #BDC3C7;
+    float: none;
+    width: 15%;
+    text-align: center;
+    position: relative;
+}
+nav > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+}
+nav > li{
+    list-style-type: none;
+}
+
+.sous{
+    display: none;
+    text-align: left;
+    box-shadow: 0px 1px 2px black;
+    background-color:#618EA8;
+    border-top: 2px solid #BDC3C7;
+    border-style:dotted;
+    position: absolute;
+    width: 70%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display:block;
+    left: 80%;
+    top:-2%;
+}
+.sous li{
+    list-style-type: none;
+    width: 50%;
+    text-align:left; 
+}
+.sous a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li class="deroulant"><a href="#">Services &ensp;</a>
+                <ul class="sous">
+                    <li><a href="#">Stratégie</a></li>
+                    <li><a href="#">Optimisation</a></li>
+                </ul>
+            </li>
+            <li class="deroulant"><a href="#">Publications &ensp;</a>
+                <ul class="sous">
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Tutoriels</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Evénements</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
